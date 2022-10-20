@@ -43,4 +43,4 @@ function play(question, answer) {
   }
 }
 console.log('----------------------');
-console.log('Your final score is ' + score);
+console.log('Your score is ' + score);
