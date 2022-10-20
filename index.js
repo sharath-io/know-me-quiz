@@ -1,6 +1,8 @@
+const chalk = require('chalk');
 const read = require('readline-sync');
+
 const userName = read.question('Whats your name ');
-console.log('Welcome to Do-You-Know-Me-Quiz ' + userName);
+console.log(chalk.blue('Welcome to Do-You-Know-Me-Quiz ') + chalk.green.underline(userName));
 console.log('lets start the game: ');
 
 var score = 0;
@@ -37,10 +39,10 @@ function play(question, answer) {
   var userAnswer = read.question(question);
   if (userAnswer.toUpperCase() === answer.toUpperCase()) {
     score = score + 1;
-    console.log('right! 👏');
+    console.log(chalk.green('right! 👏'));
   } else {
-    console.log('wrong! 👎');
+    console.log(chalk.red('wrong! 👎'));
   }
 }
 console.log('----------------------');
-console.log('Your score is ' + score);
+console.log(chalk.blue('Your score is ') + chalk.green(score));
