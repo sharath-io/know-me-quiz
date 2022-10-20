@@ -37,9 +37,9 @@ function play(question, answer) {
   var userAnswer = read.question(question);
   if (userAnswer.toUpperCase() === answer.toUpperCase()) {
     score = score + 1;
-    console.log('right!');
+    console.log('right! 👏');
   } else {
-    console.log('wrong!');
+    console.log('wrong! 👎');
   }
 }
 console.log('----------------------');
