@@ -35,7 +35,7 @@ for (var i = 0; i < questions.length; i++) {
 
 function play(question, answer) {
   var userAnswer = read.question(question);
-  if (userAnswer === answer) {
+  if (userAnswer.toUpperCase() === answer.toUpperCase()) {
     score = score + 1;
     console.log('right!');
   } else {
