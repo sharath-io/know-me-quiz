@@ -3,6 +3,17 @@ const read = require('readline-sync');
 
 var score = 0;
 
+var scores = [
+  {
+    name: 'sharath',
+    userScore: 10,
+  },
+  {
+    name: 'ravi',
+    userScore: 6,
+  },
+]
+
 const questions = [
   {
     question: 'where do I live ? ',
@@ -76,6 +87,18 @@ function call_quiz() {
   }
 }
 
+function call_high_scores() {
+  for (var i = 0; i < scores.length; i++) {
+    if (score > scores[i].userScore) {
+      console.log(chalk.red.underline('Congrats you have beaten the highest score of ' + scores[i].name));
+      console.log('send your score screenshot will udpate in the data ');
+      break;
+    }
+  }
+
+}
+
+
 
 function play() {
   const userName = read.question('Whats your name ');
@@ -84,6 +107,7 @@ function play() {
   console.log('lets start the game: This game has 2 levels \neach having 5 questions, you need to score minimum 3 in level1 to go to level 2 ');
   call_quiz();
   console.log('----------------------');
+  call_high_scores();
   console.log(chalk.blue('Your final score is ') + chalk.green.bold(score));
 }
 
