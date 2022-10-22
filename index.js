@@ -49,11 +49,11 @@ function call_quiz(){
 function play(){
   const userName = read.question('Whats your name ');
   console.log(chalk.blue('Welcome to Do-You-Know-Me-Quiz ') + 
-  chalk.green.underline(userName));
+  chalk.green.bold.underline(userName));
   console.log('lets start the game: ');
   call_quiz();
   console.log('----------------------');
-  console.log(chalk.blue('Your score is ') + chalk.green(score));
+  console.log(chalk.blue('Your score is ') + chalk.green.bold(score));
 }
 
 play();
